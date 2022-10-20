@@ -33,19 +33,89 @@ $breakpoints: (
 header {
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    position: relative;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        margin : auto; 
+        width: 50%;
+        @include tablet-size {
+            width: 25%;
+        }
+        @include desktop-size {
+            width: 20%;
+        }    
+    }
 }
 
-.logo {
-    display: block;
-    margin : auto; 
-    width: 50%;
-    @include tablet-size {
-        width: 25%;
+.restaurant-picture {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+main {
+    background-color: map-get($colours, lightgrey );
+    margin-top: -2rem;
+    border-radius: 2rem 2rem 0 0;
+    z-index: 1;
+    position: relative;
+
+
+    .title-block {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
-    @include desktop-size {
-        width: 20%;
+
+    .restaurant-name {
+        font-family: 'Shrikhand';
     }
+
+    .menus {
+        width: 90%;
+        margin: auto;
+
+        .plate-title {
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin: 20px 0;
+
+
+            &:after {
+                content: "";
+                width: 3rem;
+                height: 0.25rem;
+                background-color: map-get($colours, green);
+                left: 0;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+
+        .menu-item {
+            background-color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+            box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+            overflow: hidden;
+
+            .price{
+                font-weight: 700;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-left: 0.5rem
+            }
+        }
+    }
+
+
 
 }
 

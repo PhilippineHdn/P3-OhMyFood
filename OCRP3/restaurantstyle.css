@@ -9,23 +9,81 @@
 header {
   padding: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  position: relative;
+  display: flex;
+  align-items: center;
 }
-
-.logo {
-  display: block;
+header .logo {
   margin: auto;
   width: 50%;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .logo {
+  header .logo {
     width: 25%;
   }
 }
 @media screen and (min-width: 992px) {
-  .logo {
+  header .logo {
     width: 20%;
   }
+}
+
+.restaurant-picture {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+main {
+  background-color: #f7f7f7;
+  margin-top: -2rem;
+  border-radius: 2rem 2rem 0 0;
+  z-index: 1;
+  position: relative;
+}
+main .title-block {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .restaurant-name {
+  font-family: "Shrikhand";
+}
+main .menus {
+  width: 90%;
+  margin: auto;
+}
+main .menus .plate-title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin: 20px 0;
+}
+main .menus .plate-title:after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+main .menus .menu-item {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+main .menus .menu-item .price {
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
 
 footer {
