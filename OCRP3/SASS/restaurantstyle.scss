@@ -25,24 +25,24 @@ $breakpoints: (
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand', sans-serif;
     margin: 0
 }
-
-h3, p, li, button {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
-
 
 header {
     padding: 1rem;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     display: flex;
     align-items: center;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
     .logo {
         margin : auto; 
@@ -52,7 +52,7 @@ header {
         }
         @include desktop-size {
             width: 20%;
-        }    
+        }
     }
 }
 
@@ -92,22 +92,26 @@ main {
             margin: auto;
         }
 
+        .restaurant-name {
+            font-family: 'Shrikhand';
+        }
+
         .heart {
             position: relative;
             height: 1.875rem;
             width: 1.875rem;
             overflow: hidden;
             margin-right: 3%;
-          }
+        }
           
-          .heart-1 {
+        .heart-1 {
             color: black;
             position: absolute;
             bottom: 0;
             font-size: 1.875rem;
-          }
+        }
           
-          .heart-second {
+        .heart-second {
             max-height: 0;
             transition: max-height 1.5s linear;
             overflow: hidden;
@@ -115,9 +119,9 @@ main {
             bottom: 0;
             left: 0;
             z-index: 2;
-          }
+        }
           
-          .heart-2 {
+        .heart-2 {
             position: relative;
             transform: translateY(-100%);
             transition: transform 1.5s linear;
@@ -125,20 +129,16 @@ main {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 1.875rem;
-          }
+        }
           
           .heart:hover .heart-second {
             max-height: 1.875rem;
-          }
+        }
           
-          .heart:hover .heart-2 {
+        .heart:hover .heart-2 {
             transform: translateY(0);
         }
 
-    }
-
-    .restaurant-name {
-        font-family: 'Shrikhand';
     }
 
     .menus {
@@ -162,7 +162,6 @@ main {
             padding-bottom: 0.5rem;
             margin: 20px 0;
 
-
             &:after {
                 content: "";
                 width: 3rem;
@@ -177,7 +176,6 @@ main {
         .menu-item {
             background-color: #fff;
             overflow: hidden;
-            /* padding: 1rem; */
             display: flex;
             justify-content: space-between;
             border-radius: 0.75rem;
@@ -217,14 +215,14 @@ main {
 
             }
 
-            .price{
+            .price {
                 font-weight: bold;
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;
                 background-color: white;
-                padding: 0 12px 8px 0;
-                margin: 10px 0;
+                padding: 0 .75rem .5rem 0;
+                margin: .625rem 0;
             }
 
             .menu-hovered {
@@ -233,7 +231,7 @@ main {
                 width: 0;
                 cursor: pointer;
                 opacity: 10;
-                border-radius: 0 10px 10px 0;
+                border-radius: 0 .625rem .625rem 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -241,7 +239,7 @@ main {
 
                 .fa-circle-check {
                     opacity: 0;
-                    font-size: 30px;
+                    font-size: 1.875rem;
                 }
 
             }
@@ -279,17 +277,17 @@ main {
             animation-delay: 0.2s;
         }
 
-            @keyframes slideInUp {
+        @keyframes slideInUp {
             0% {
-            transform: translateY(20%);
-            visibility: visible;
-            opacity: 0.5;
+                transform: translateY(20%);
+                visibility: visible;
+                opacity: 0.5;
             }
             100% {
-            transform: translateY(0);
-            opacity: 1;
+                transform: translateY(0);
+                opacity: 1;
             }
-            }
+        }
 
     }
 
@@ -300,14 +298,14 @@ main {
             margin: 50px auto;
             padding: 0.75rem 1.5rem;
             color: white;
-            border-radius: 25px;
+            border-radius: 1.5625rem;
             border: transparent;
-            box-shadow: 5px 8px 20px 0px rgb(0 0 0 / 54%);
+            box-shadow: .3125rem .5rem 1.25rem 0rem rgb(0 0 0 / 54%);
             background: rgb(255,121,218);
-            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-            font-size: 16px;
+            background: linear-gradient(180deg, $pink 0%, $purple 100%);
+            font-size: 1rem;
             &:hover{
-                box-shadow: 5px 8px 20px 0px rgb(0 0 0 / 75%);
+                box-shadow: .3125rem .5rem 1.25rem 0rem rgb(0 0 0 / 75%);
                 cursor: pointer;
                 transition-duration: 0.50s;
             }
