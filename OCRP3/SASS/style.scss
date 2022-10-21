@@ -207,26 +207,48 @@ header {
         justify-content: center;
         gap: .3125rem;
     }
-    
-    .heart {
-        width: 3.125rem;
-        font-size: 1.875rem;
-        &:hover {
-            animation: fill-heart 1.5s ease-out;
-            background: linear-gradient($purple, $pink);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;  
-        }
-    }
 
-    @keyframes fill-heart {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+    .heart {
+        position: relative;
+        height: 1.875rem;
+        width: 1.875rem;
+        overflow: hidden;
+        margin-right: 3%;
+      }
+      
+      .heart-1 {
+        color: black;
+        position: absolute;
+        bottom: 0;
+        font-size: 1.875rem;
+      }
+      
+      .heart-second {
+        max-height: 0;
+        transition: max-height 1.5s linear;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+      }
+      
+      .heart-2 {
+        position: relative;
+        transform: translateY(-100%);
+        transition: transform 1.5s linear;
+        background: linear-gradient($pink,$purple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.875rem;
+      }
+      
+      .heart:hover .heart-second {
+        max-height: 1.875rem;
+      }
+      
+      .heart:hover .heart-2 {
+        transform: translateY(0);
     }
 
 }
