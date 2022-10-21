@@ -74,24 +74,42 @@ main .title-block {
     margin: auto;
   }
 }
-main .title-block .fa-heart {
-  width: 50px;
-  font-size: 30px;
+main .title-block .heart {
+  position: relative;
+  height: 1.875rem;
+  width: 1.875rem;
+  overflow: hidden;
+  margin-right: 3%;
 }
-main .title-block .fa-heart:hover {
-  animation: fill-heart 1.5s ease-out;
-  background: linear-gradient(#9356DC, #FF79DA);
+main .title-block .heart-1 {
+  color: black;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.875rem;
+}
+main .title-block .heart-second {
+  max-height: 0;
+  transition: max-height 1.5s linear;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+main .title-block .heart-2 {
+  position: relative;
+  transform: translateY(-100%);
+  transition: transform 1.5s linear;
+  background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  font-size: 1.875rem;
 }
-@keyframes fill-heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+main .title-block .heart:hover .heart-second {
+  max-height: 1.875rem;
+}
+main .title-block .heart:hover .heart-2 {
+  transform: translateY(0);
 }
 main .restaurant-name {
   font-family: "Shrikhand";
