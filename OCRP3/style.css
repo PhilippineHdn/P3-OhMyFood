@@ -6,13 +6,18 @@
   scroll-behavior: smooth;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .loader {
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(236, 236, 236, 0.9);
+  background-color: rgba(247, 247, 247, 0.9);
   animation: loader 0.01s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
@@ -127,7 +132,7 @@ header .logo {
 .process-elements .process-element {
   background-color: #f7f7f7;
   width: 80%;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   margin: auto;
   position: relative;
@@ -141,8 +146,8 @@ header .logo {
   color: #9356DC;
 }
 .process-elements .number {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   background-color: #9356DC;
   border-radius: 50%;
   color: white;
@@ -150,12 +155,12 @@ header .logo {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  line-height: 25px;
+  line-height: 1.5625rem;
 }
 .process-elements .process-rule {
   display: flex;
-  gap: 30px;
-  margin: 20px auto;
+  gap: 1.875rem;
+  margin: 1.25rem auto;
 }
 @media screen and (min-width: 992px) {
   .process-elements {
