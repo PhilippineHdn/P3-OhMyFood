@@ -263,6 +263,9 @@ header .logo {
   -webkit-text-fill-color: transparent;
   font-size: 1.875rem;
 }
+.restaurants .heart:hover .heart-1 {
+  color: #9356DC;
+}
 .restaurants .heart:hover .heart-second {
   max-height: 1.875rem;
 }

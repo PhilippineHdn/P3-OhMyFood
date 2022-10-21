@@ -108,6 +108,9 @@ main .title-block .heart-2 {
   -webkit-text-fill-color: transparent;
   font-size: 1.875rem;
 }
+main .title-block .heart:hover .heart-1 {
+  color: #9356DC;
+}
 main .title-block .heart:hover .heart-second {
   max-height: 1.875rem;
 }
