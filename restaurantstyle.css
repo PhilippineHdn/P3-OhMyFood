@@ -81,7 +81,6 @@ main .title-block .heart {
   position: relative;
   height: 1.875rem;
   width: 1.875rem;
-  overflow: hidden;
   margin-right: 3%;
 }
 main .title-block .heart-1 {
@@ -203,7 +202,7 @@ main .menus .menu-item .menu-hovered {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; 
 }
 main .menus .menu-item .menu-hovered .fa-circle-check {
   opacity: 0;
